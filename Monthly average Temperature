@@ -1,0 +1,20 @@
+#Python code that visualizes  monthly average Temperature conditions over the years
+import matplotlib.pyplot as plt
+
+months = ['January', 'February', 'March', 'April', 'May', 'June', 
+          'July', 'August', 'September', 'October', 'November', 'December']
+
+temperature_data = [12, 14, 18, 22, 26, 30, 32, 31, 28, 24, 18, 14]
+
+plt.figure(figsize=(10, 6))
+plt.plot(months, temperature_data, label='Average Temperature', marker='o', linestyle='-', color='red')
+
+plt.title('Monthly Average Temperature', fontsize=14)
+plt.xlabel('Month', fontsize=12)
+plt.ylabel('Temperature (°C)', fontsize=12)
+
+plt.legend()
+
+plt.grid(True)
+plt.xticks(rotation=45)  # Rotate x-axis labels for better readability
+plt.show()
