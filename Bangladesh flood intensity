@@ -1,0 +1,21 @@
+# Python code that visualizes  monthly average Temperature conditions over the years
+import matplotlib.pyplot as plt
+
+dates = ['1 Aug', '15 Aug', '31 Aug', '15 Sep', '30 Sep', '3 Oct']
+
+nasa_data = [5, 220, 5, 3, 10, 10]
+
+agrox_data = [6, 215, 5, 4, 10, 15]
+
+plt.figure(figsize=(10, 6))
+plt.plot(dates, nasa_data, label='NASA Data', marker='o', linestyle='-', color='blue')
+plt.plot(dates, agrox_data, label='AgroX Data', marker='o', linestyle='--', color='green')
+
+plt.title('Bangladesh Flood Intensity Comparison (NASA vs AgroX)', fontsize=14)
+plt.xlabel('Date', fontsize=12)
+plt.ylabel('Flood Intensity (mm)', fontsize=12)
+
+plt.legend()
+
+plt.grid(True)
+plt.show()
