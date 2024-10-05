@@ -1,0 +1,39 @@
+# Python code that visualizes drought conditions over the years
+import matplotlib.pyplot as plt
+import numpy as np
+
+years = np.arange(2015, 2025)
+
+rainfall_data = [1100, 1050, 1000, 980, 950, 930, 900, 850, 800, 780]  # Rainfall in mm
+temperature_rise_data = [0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55]  # Temperature rise in °C
+soil_moisture_data = [80, 78, 75, 72, 70, 68, 65, 63, 60, 58]  # Soil moisture as percentage
+
+# Create the plot for rainfall
+plt.figure(figsize=(12, 8))
+
+# Subplot 1: Rainfall Data
+plt.subplot(3, 1, 1)
+plt.plot(years, rainfall_data, label='Annual Rainfall (mm)', marker='o', linestyle='-', color='blue')
+plt.title('Drought Analysis: 2015-2024', fontsize=16)
+plt.ylabel('Rainfall (mm)', fontsize=12)
+plt.grid(True)
+plt.legend()
+
+# Subplot 2: Temperature Rise Data
+plt.subplot(3, 1, 2)
+plt.plot(years, temperature_rise_data, label='Temperature Rise (°C)', marker='o', linestyle='-', color='red')
+plt.ylabel('Temperature Rise (°C)', fontsize=12)
+plt.grid(True)
+plt.legend()
+
+# Subplot 3: Soil Moisture Data
+plt.subplot(3, 1, 3)
+plt.plot(years, soil_moisture_data, label='Soil Moisture (%)', marker='o', linestyle='-', color='green')
+plt.xlabel('Year', fontsize=12)
+plt.ylabel('Soil Moisture (%)', fontsize=12)
+plt.grid(True)
+plt.legend()
+
+# Display the complete plot
+plt.tight_layout()
+plt.show()
